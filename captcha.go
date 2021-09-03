@@ -53,12 +53,12 @@ func (me *Captcha) OutPut() (string, *image.RGBA) {
 func (me *Captcha) initCanvas() *image.RGBA {
 	dest := image.NewRGBA(image.Rect(0, 0, me.W, me.H))
 
-	r := uint8(me.RangeRand(157, 255))
-	g := uint8(me.RangeRand(157, 255))
-	b := uint8(me.RangeRand(157, 255))
-	r = uint8(255)
-	g = uint8(255)
-	b = uint8(255)
+	// r := uint8(me.RangeRand(157, 255))
+	// g := uint8(me.RangeRand(157, 255))
+	// b := uint8(me.RangeRand(157, 255))
+	r := uint8(255)
+	g := uint8(255)
+	b := uint8(255)
 	// 填充背景色
 	for x := 0; x < me.W; x++ {
 		for y := 0; y < me.H; y++ {
