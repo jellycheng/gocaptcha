@@ -300,8 +300,8 @@ func (me *Captcha) GetRandCode() string {
 	letterStr := []rune(me.Charstr)
 	lenStr := len(letterStr)
 	b := make([]rune, me.CodeLen)
+	mathrand.Seed(time.Now().UnixNano())
 	for i := range b {
-		mathrand.Seed(time.Now().UnixNano())
 		b[i] = letterStr[mathrand.Intn(lenStr)]
 	}
 	return string(b)
